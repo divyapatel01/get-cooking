@@ -1,16 +1,132 @@
-@import "./variable";
+@import "./scss/variable";
+
+/* playfair-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/playfair-display-v37-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/poppins-v21-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/poppins-v21-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $primary-blue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display";
+}
+
+h2 {
+  font-size: 24px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    width: 100%;
+    height: 1px;
+    background-color: $divider-color;
+    margin-left: 12px;
+  }
+
+  &:has(svg) {
+    cursor: pointer;
+    svg {
+      margin-left: -30px;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    &:has(svg) {
+      svg {
+        margin-left: 0;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+        color: var(--bs-primary);
+      }
+    }
+  }
+}
+
+.app-logo {
+  height: 70px;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.slick-slider {
+  .slick-prev {
+    left: -40px;
+  }
+  .slick-next {
+    right: -40px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+    font-size: 24px;
+  }
+}
+
+.auto-search-list {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-top: 0;
+  border-bottom: 0;
+
+  .auto-search-list-item {
+    padding: 8px;
+    border-bottom: 1px solid lightgray;
+
+    &:hover {
+      background-color: azure;
+      cursor: pointer;
+    }
+  }
 }

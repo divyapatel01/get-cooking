@@ -1,15 +1,26 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-perfect-scrollbar/dist/css/styles.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./scss/custom.scss";
+import "./index.scss";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import { Provider } from "react-redux";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import store from "./store";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

@@ -2,15 +2,32 @@
   "name": "get-cooking",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "divyapatel1697@gmail.com",
+    "name": "Divya Patel",
+    "url": "https://www.linkedin.com/in/divya-patel-june01/"
+  },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.97",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
     "sass": "^1.77.1",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -37,5 +54,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/react-slick": "^0.23.13"
   }
 }

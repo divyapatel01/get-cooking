@@ -1,0 +1,22 @@
+$body-bg: #fff;
+$body-color: #111;
+
+$primary: #fee96c;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": maroon,
+);
+
+$border-radius: 0;
+
+$badge-color: $body-color;
+$badge-padding-y: 0.5rem;
+$badge-padding-x: 1rem;
+$badge-border-radius: $border-radius;
+
+// Import Bootstrap after the overrides
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/bootstrap-reboot";
+@import "node_modules/bootstrap/scss/bootstrap-utilities";

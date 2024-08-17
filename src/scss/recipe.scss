@@ -1,0 +1,176 @@
+.recipe-card-default {
+  margin-bottom: 32px;
+
+  .recipe-card-media {
+    padding-top: 125%;
+    // padding-top: 56.25%;
+  }
+}
+
+.recipe-card-list {
+  margin-bottom: 24px;
+
+  .recipe-card-media {
+    padding-top: 100%;
+  }
+}
+
+.recipe-card-carousel {
+  padding: 0 16px;
+  position: relative;
+  cursor: pointer;
+
+  .recipe-card-meta {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+  }
+
+  .recipe-card-media {
+    padding-top: 125%;
+  }
+
+  .recipe-card-body {
+    position: absolute;
+    bottom: 12px;
+    background: white;
+    left: 28px;
+    right: 28px;
+    padding: 16px;
+    max-height: calc(100% - 24px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe-card-desc {
+    margin: 0 -16px;
+    padding: 0 16px;
+    opacity: 0;
+    max-height: 0;
+    flex: 1;
+    transition: 0.5s ease-in-out;
+    text-align: justify;
+  }
+
+  &:hover {
+    .recipe-card-desc {
+      opacity: 1;
+      max-height: 400px;
+    }
+  }
+}
+
+.recipe-card-title {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.recipe-card-media {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  cursor: pointer;
+
+  .recipe-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.recipe-filter {
+  position: sticky;
+  top: 20px;
+  padding-bottom: 8px;
+}
+
+.recipe-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .recipe-img-wrapper {
+    position: relative;
+    padding-top: 40%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .recipe-title {
+      z-index: 9;
+      position: absolute;
+      bottom: 32px;
+      background-color: white;
+      padding: 16px;
+      margin: 0;
+      font-size: 60px;
+    }
+
+    .recipe-ratings {
+      position: absolute;
+      bottom: 32px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .recipe-rate {
+      background: white;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .recipe-meta-wrapper {
+    display: flex;
+    gap: 16px;
+  }
+
+  .recipe-meta {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 16px;
+
+    span:last-child {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .recipe-nutrition,
+  .recipe-instructions {
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 24px;
+  }
+}
