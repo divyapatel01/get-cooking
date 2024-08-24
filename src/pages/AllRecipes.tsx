@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import RecipeCard from "../components/RecipeCard";
-import RecipeSearch from "../components/RecipeSearch";
+import RecipeCard from "../components/recipe/RecipeCard";
+import RecipeSearch from "../components/recipe/RecipeSearch";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { recipeList, recipeTags } from "../store/recipe/actions";
 

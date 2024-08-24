@@ -1,5 +1,5 @@
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
-import { Recipe } from "../types";
+import { Recipe } from "../../types";
 
 const RecipeRate = ({ recipe, position = "row" }: { recipe: Recipe; position?: "row" | "col" }) => {
   return (

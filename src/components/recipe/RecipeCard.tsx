@@ -1,13 +1,13 @@
-import "../scss/recipe.scss";
+import "../../scss/recipe.scss";
 
+import moment from "moment";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
 import { RiThumbUpLine } from "react-icons/ri";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { Link, useNavigate } from "react-router-dom";
 
-import { Recipe } from "../types";
-import moment from "moment";
+import { Recipe } from "../../types";
 
 interface Props {
   recipe: Recipe;

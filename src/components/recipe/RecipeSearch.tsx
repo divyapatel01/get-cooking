@@ -1,7 +1,8 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { CgSearch } from "react-icons/cg";
-import useDebounce from "../hooks/useDebounce";
-import axios from "axios";
+
+import useDebounce from "../../hooks/useDebounce";
 
 type SearchDetail = {
   display: string;

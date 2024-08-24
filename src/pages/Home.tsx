@@ -1,7 +1,7 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Slider from "react-slick";
 
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "../components/recipe/RecipeCard";
 
 import { useAppSelector } from "../store/hooks";
 

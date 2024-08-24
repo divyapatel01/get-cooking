@@ -1,5 +1,5 @@
 import moment from "moment";
-import { Recipe } from "../types";
+import { Recipe } from "../../types";
 
 const RecipeCredits = ({ recipe }: { recipe: Recipe }) => {
   return (

@@ -2,9 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
-import RecipeCredits from "../components/RecipeCredits";
-import RecipeRate from "../components/RecipeRate";
-import RecipeSimilar from "../components/RecipeSimilar";
+import RecipeCredits from "../components/recipe/RecipeCredits";
+import RecipeRate from "../components/recipe/RecipeRate";
+import RecipeSimilar from "../components/recipe/RecipeSimilar";
 import useIsMobile from "../hooks/useIsMobile";
 import { Recipe } from "../types";
 

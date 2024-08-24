@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { Recipe } from "../types";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import { Recipe } from "../../types";
+import Loading from "../Loading";
 import RecipeCard from "./RecipeCard";
-import Loading from "./Loading";
 
 const RecipeSimilar = () => {
   const { id } = useParams();
