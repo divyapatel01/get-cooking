@@ -146,6 +146,12 @@
     }
   }
 
+  .recipe-img {
+    position: sticky;
+    top: 16px;
+    bottom: 16px;
+  }
+
   .recipe-meta-wrapper {
     display: flex;
     gap: 16px;

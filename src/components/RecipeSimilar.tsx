@@ -28,13 +28,15 @@ const RecipeSimilar = () => {
       {details.length !== 0 ? (
         <div>
           <h2>You may like these too</h2>
-          {details.slice(0, 5).map((item, i) => (
-            <RecipeCard key={i} type="list" recipe={item} />
-          ))}
+          <div className="row">
+            {details.slice(0, 5).map((item, i) => (
+              <div className="col-md-3">
+                <RecipeCard key={i} type="default" recipe={item} />
+              </div>
+            ))}
+          </div>
         </div>
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 };

@@ -39,7 +39,7 @@ const RecipeDetail = () => {
           <div className="col-md-6">
             {isMobile && <h1 className="recipe-title">{details.name}</h1>}
 
-            <img src={details.thumbnail_url} alt="" className="img-fluid" />
+            <img src={details.thumbnail_url} alt="" className="img-fluid recipe-img" />
           </div>
           <div className="col-md-6">
             {!isMobile && <h1 className="recipe-title">{details.name}</h1>}
