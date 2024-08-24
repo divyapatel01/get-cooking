@@ -89,13 +89,23 @@ const RecipeDetail = () => {
           </div>
         </div>
 
-        <hr />
-
-        <div className="d-flex justify-content-between align-items-center">
-          <RecipeCredits recipe={details} />
-          <RecipeRate recipe={details} />
+        <div>
+          <h2>Credits</h2>
+          <div className="d-flex justify-content-between align-items-center">
+            <RecipeCredits recipe={details} />
+            <RecipeRate recipe={details} />
+          </div>
         </div>
       </div>
+
+      <div>
+        <h2>Notes</h2>
+        <p>
+          * Nutrition info is a rough estimate based on the ingredients. Note that values may vary from case to case.
+        </p>
+        <p>* As with all recipes, there is a number of ways you can get things done.</p>
+      </div>
+
       <RecipeSimilar />
     </>
   );

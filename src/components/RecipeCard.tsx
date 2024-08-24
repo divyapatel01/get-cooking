@@ -24,7 +24,7 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
         <div className="recipe-card-list">
           <div className="row">
             <div className="col-md-4">
-              <div className="recipe-card-media">
+              <div className="recipe-card-media" onClick={() => navigate(`/recipe/${recipe.id}`)}>
                 <img className="recipe-card-img" src={recipe.thumbnail_url} alt={recipe.thumbnail_alt_text} />
               </div>
             </div>
@@ -45,7 +45,9 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
                   ) : null}
                 </div>
               </div>
-              <h4 className="recipe-card-title">{recipe.name}</h4>
+              <h4 className="recipe-card-title" onClick={() => navigate(`/recipe/${recipe.id}`)}>
+                {recipe.name}
+              </h4>
               <Link to={`/recipe/${recipe.id}`}>Read More</Link>
             </div>
           </div>

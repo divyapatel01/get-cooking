@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import RecipeSearch from "./RecipeSearch";
+import RecipeSearch from "../RecipeSearch";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

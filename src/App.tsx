@@ -2,14 +2,16 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import Header from "./components/Header";
-
 import AllRecipes from "./pages/AllRecipes";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import RecipeDetail from "./pages/RecipeDetail";
 
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import Loading from "./components/Loading";
+
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { recipeFeeds } from "./store/recipe/actions";
 
@@ -47,6 +49,8 @@ export default function App() {
               </Routes>
             </div>
           </div>
+          <ScrollToTop />
+          <Footer />
         </Router>
       )}
     </div>

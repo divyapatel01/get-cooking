@@ -2,11 +2,15 @@ $body-bg: #fff;
 $body-color: #111;
 
 $primary: #fee96c;
+$secondary: #664fce;
 
 $theme-colors: (
   "primary": $primary,
+  "secondary": $secondary,
   "danger": maroon,
 );
+
+$link-color: $secondary;
 
 $border-radius: 0;
 
