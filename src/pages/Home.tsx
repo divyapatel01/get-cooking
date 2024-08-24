@@ -1,11 +1,12 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-
 import RecipeCard from "../components/recipe/RecipeCard";
-
 import { useAppSelector } from "../store/hooks";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const trending = useAppSelector((state) => state.recipes.trending);
   const featured = useAppSelector((state) => state.recipes.featured);
   const top = useAppSelector((state) => state.recipes.top);
@@ -37,7 +38,7 @@ const Home = () => {
         </div>
         {/* Popular this week */}
         <div className="col-md-4">
-          <h2>
+          <h2 onClick={() => navigate("/recipes/popular")}>
             Popular This Week <FaArrowRightLong />
           </h2>
           {top?.items?.slice(0, 5).map((item, i) => (
@@ -46,7 +47,7 @@ const Home = () => {
         </div>
         {/* Popular this week */}
         <div className="col-md-4">
-          <h2>
+          <h2 onClick={() => navigate("/recipes/seasonal")}>
             {seasonal?.name} <FaArrowRightLong />
           </h2>
           {seasonal?.items?.slice(0, 5).map((item, i) => (

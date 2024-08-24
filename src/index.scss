@@ -87,6 +87,16 @@ h2 {
   }
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+}
+
 .app-logo {
   height: 70px;
   padding: 16px;

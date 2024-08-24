@@ -29,7 +29,7 @@ const RecipeDetail = () => {
   }
 
   if (!details) {
-    return <p>This recipe is not available</p>;
+    return <p className="text-center">This recipe is not available</p>;
   }
 
   return (
