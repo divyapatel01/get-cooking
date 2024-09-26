@@ -20,7 +20,7 @@ $badge-padding-x: 1rem;
 $badge-border-radius: $border-radius;
 
 // Import Bootstrap after the overrides
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/bootstrap/scss/bootstrap-grid";
-@import "node_modules/bootstrap/scss/bootstrap-reboot";
-@import "node_modules/bootstrap/scss/bootstrap-utilities";
+@import "../bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/bootstrap-grid";
+@import "../bootstrap/scss/bootstrap-reboot";
+@import "../bootstrap/scss/bootstrap-utilities.scss";

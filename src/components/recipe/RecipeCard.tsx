@@ -1,5 +1,3 @@
-import "../../scss/recipe.scss";
-
 import moment from "moment";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BsClock } from "react-icons/bs";
