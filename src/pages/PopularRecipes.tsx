@@ -6,10 +6,10 @@ const PopularRecipes = () => {
 
   return (
     <>
-      <h2>Popular Recipes</h2>
+      {/* <h2>Popular Recipes</h2> */}
       <div className="row">
         {top?.items?.map((item, i) => (
-          <div key={i} className="col-md-3">
+          <div key={i} className="col-md-4">
             <RecipeCard recipe={item} />
           </div>
         ))}

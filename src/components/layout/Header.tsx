@@ -7,9 +7,10 @@ const Header = () => {
 
   const links = [
     { key: 1, label: "Home", url: "/" },
-    // { key: 2, label: "Categories", url: "/" },
-    { key: 3, label: "Recipes", url: "/recipes" },
-    // { key: 4, label: "Contact", url: "/" },
+    // { key: 2, label: "Categories", url: "/categories" },
+    { key: 3, label: "All Recipes", url: "/recipes" },
+    { key: 4, label: "Popular", url: "/recipes/popular" },
+    { key: 5, label: "Seasonal", url: "/recipes/seasonal" },
   ];
 
   const toggleNavbar = () => {
@@ -35,7 +36,7 @@ const Header = () => {
           </form>
           <ul className="navbar-nav mr-auto gap-3">
             {links.map((link) => (
-              <li className="nav-item active">
+              <li className="nav-item active" key={link.key}>
                 <Link className="nav-link fw-500" to={link.url}>
                   {link.label}
                 </Link>

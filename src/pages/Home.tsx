@@ -15,11 +15,14 @@ const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
     centerPadding: "16px",
+    autoplay: true,
+    speed: 9000,
+    autoplaySpeed: 9000,
+    cssEase: "linear",
   };
 
   return (

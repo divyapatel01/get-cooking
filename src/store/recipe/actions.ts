@@ -8,14 +8,16 @@ const F = "recipe/feeds";
 const T = "recipe/tags";
 
 interface Params {
+  page: number;
+  limit: number;
   q: string;
 }
 
 export const recipeList = createAsyncThunk(L, async (params: Params) => {
   const response = await axios.get("/recipes/list", {
-    params: { from: "0", size: "16", q: params.q },
+    params: { from: String(params.page), size: String(params.limit), q: params.q },
   });
-  return response.data.results;
+  return { ...response.data, currentPage: params.page };
 });
 
 export const recipeFeeds = createAsyncThunk(F, async () => {

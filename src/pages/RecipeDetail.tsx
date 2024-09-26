@@ -46,7 +46,7 @@ const RecipeDetail = () => {
 
             <div className="row" style={{ gap: "24px" }}>
               <div className="col-md-12">
-                <p>{details.description}</p>
+                <div dangerouslySetInnerHTML={{ __html: details.description }} />
                 <div className="recipe-instructions">
                   <h3 className="recipe-subtitle">Instructions</h3>
                   <ol>

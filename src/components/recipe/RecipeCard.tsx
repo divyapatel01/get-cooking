@@ -75,7 +75,7 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
               ) : null}
             </div>
             <h4 className="recipe-card-title">{recipe.name}</h4>
-            <PerfectScrollbar className="recipe-card-desc">{recipe.description}</PerfectScrollbar>
+            <PerfectScrollbar className="recipe-card-desc" dangerouslySetInnerHTML={{ __html: recipe.description }} />
           </div>
           <div className="recipe-card-meta">
             <div className="badge bg-primary">
@@ -152,6 +152,7 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
             <h4 className="recipe-card-title" onClick={() => navigate(`/recipe/${recipe.id}`)}>
               {recipe.name}
             </h4>
+            <div className="recipe-card-desc" dangerouslySetInnerHTML={{ __html: recipe.description }} />
           </div>
         </div>
       );

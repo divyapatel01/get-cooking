@@ -6,10 +6,10 @@ const SeasonalRecipes = () => {
 
   return (
     <>
-      <h2>{seasonal?.name || "Seasonal Recipes"}</h2>
+      {/* <h2>{seasonal?.name || "Seasonal Recipes"}</h2> */}
       <div className="row">
         {seasonal?.items?.map((item, i) => (
-          <div key={i} className="col-md-3">
+          <div key={i} className="col-md-4">
             <RecipeCard recipe={item} />
           </div>
         ))}

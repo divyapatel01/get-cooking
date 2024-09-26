@@ -12,10 +12,14 @@ const recipeSlice = createSlice({
     top: undefined as Feed | undefined,
     seasonal: undefined as Feed | undefined,
     tags: [] as Tags[],
-    list: [] as Recipe[],
+    list: { count: 0, results: [] as Recipe[], currentPage: 0 },
     isLoading: false,
   },
-  reducers: {},
+  reducers: {
+    setListPage: (state, action) => {
+      state.list = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(Actions.recipeList.pending, (state) => {
@@ -45,5 +49,7 @@ const recipeSlice = createSlice({
       });
   },
 });
+
+export const { setListPage } = recipeSlice.actions;
 
 export default recipeSlice.reducer;
