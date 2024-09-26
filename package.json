@@ -9,10 +9,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.97",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "moment": "^2.30.1",
@@ -57,6 +53,10 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.97",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "@types/react-slick": "^0.23.13"
   }
 }
