@@ -48,7 +48,7 @@ dependencies:
     specifier: ^2.4.1
     version: 2.4.2(redux@4.2.1)
   sass:
-    specifier: ^1.77.1
+    specifier: ^1.79.3
     version: 1.79.3
   slick-carousel:
     specifier: ^1.8.1
