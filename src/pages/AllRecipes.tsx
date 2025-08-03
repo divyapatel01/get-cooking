@@ -12,6 +12,7 @@ export default function AllRecipes() {
 
   const recipes = useAppSelector((state) => state.recipes.list.results);
   const totalCount = useAppSelector((state) => state.recipes.list.count);
+  const isLoading = useAppSelector((state) => state.recipes.list.isLoading);
   const tags = useAppSelector((state) => state.recipes.tags);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,20 +20,22 @@ export default function AllRecipes() {
   const totalPages = Math.ceil(totalCount / PAGE_LIMIT);
 
   useEffect(() => {
-    dispatch(recipeList({ page: currentPage - 1, limit: 9, q: "" }));
+    if (recipes.length === 0 && !isLoading) {
+      dispatch(recipeList({ page: currentPage - 1, limit: 9, q: "" }));
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPage]);
+  }, []);
 
   useEffect(() => {
-    if (tags.length === 0) {
+    if (tags.list.length === 0 && !tags.isLoading) {
       dispatch(recipeTags());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tags]);
 
-  const seasonal = tags.filter((t) => t.type === "seasonal");
-  const cuisine = tags.filter((t) => t.type === "cuisine");
-  const meal = tags.filter((t) => t.type === "meal");
+  const seasonal = tags.list.filter((t) => t.type === "seasonal");
+  const cuisine = tags.list.filter((t) => t.type === "cuisine");
+  const meal = tags.list.filter((t) => t.type === "meal");
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -157,6 +160,7 @@ export default function AllRecipes() {
           </div>
         </div>
       </div>
+
       {/* pagination */}
       <div className="d-flex justify-content-end">
         <nav aria-label="Page navigation example">

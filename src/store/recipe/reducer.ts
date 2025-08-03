@@ -11,9 +11,9 @@ const recipeSlice = createSlice({
     trending: undefined as Feed | undefined,
     top: undefined as Feed | undefined,
     seasonal: undefined as Feed | undefined,
-    tags: [] as Tags[],
-    list: { count: 0, results: [] as Recipe[], currentPage: 0 },
-    isLoading: false,
+    tags: { list: [] as Tags[], isLoading: false },
+    list: { count: 0, results: [] as Recipe[], currentPage: 0, isLoading: false },
+    isLoading: true,
   },
   reducers: {
     setListPage: (state, action) => {
@@ -23,11 +23,14 @@ const recipeSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(Actions.recipeList.pending, (state) => {
-        state.isLoading = true;
+        state.list.isLoading = true;
       })
       .addCase(Actions.recipeList.fulfilled, (state, action) => {
         state.list = action.payload;
-        state.isLoading = false;
+        state.list.isLoading = false;
+      })
+      .addCase(Actions.recipeList.rejected, (state) => {
+        state.list.isLoading = true;
       })
       .addCase(Actions.recipeFeeds.pending, (state) => {
         state.isLoading = true;
@@ -41,11 +44,14 @@ const recipeSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(Actions.recipeTags.pending, (state) => {
-        state.isLoading = true;
+        state.tags.isLoading = true;
       })
       .addCase(Actions.recipeTags.fulfilled, (state, action) => {
-        state.tags = action.payload;
-        state.isLoading = false;
+        state.tags.list = action.payload;
+        state.tags.isLoading = false;
+      })
+      .addCase(Actions.recipeTags.rejected, (state) => {
+        state.tags.isLoading = false;
       });
   },
 });
