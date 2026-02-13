@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import RecipeCard from "../components/recipe/RecipeCard";
 import { useAppSelector } from "../store/hooks";
 
+const FaArrowRightLongIcon = FaArrowRightLong as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -42,7 +44,7 @@ const Home = () => {
         {/* Popular this week */}
         <div className="col-md-4">
           <h2 onClick={() => navigate("/recipes/popular")}>
-            Popular This Week <FaArrowRightLong />
+            Popular This Week <FaArrowRightLongIcon />
           </h2>
           {top?.items?.slice(0, 5).map((item, i) => (
             <RecipeCard key={i} type="list" recipe={item} />
@@ -51,7 +53,7 @@ const Home = () => {
         {/* Popular this week */}
         <div className="col-md-4">
           <h2 onClick={() => navigate("/recipes/seasonal")}>
-            {seasonal?.name} <FaArrowRightLong />
+            {seasonal?.name} <FaArrowRightLongIcon />
           </h2>
           {seasonal?.items?.slice(0, 5).map((item, i) => (
             <RecipeCard key={i} type="list" recipe={item} />

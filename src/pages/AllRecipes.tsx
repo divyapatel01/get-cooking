@@ -5,6 +5,9 @@ import RecipeSearch from "../components/recipe/RecipeSearch";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { recipeList, recipeTags } from "../store/recipe/actions";
 
+const GrFormNextIcon = GrFormNext as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const GrFormPreviousIcon = GrFormPrevious as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 const PAGE_LIMIT = 9;
 
 export default function AllRecipes() {
@@ -172,7 +175,7 @@ export default function AllRecipes() {
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
               >
-                <GrFormPrevious />
+                <GrFormPreviousIcon />
               </button>
             </li>
 
@@ -186,7 +189,7 @@ export default function AllRecipes() {
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
               >
-                <GrFormNext />
+                <GrFormNextIcon />
               </button>
             </li>
           </ul>

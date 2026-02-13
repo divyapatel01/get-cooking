@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowUp } from "react-icons/fa6";
+import { FaArrowUp } from "react-icons/fa";
+
+const ArrowIcon = FaArrowUp as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Toggle visibility when scrolling
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -28,17 +25,17 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div>
+    <>
       {isVisible && (
         <button
           onClick={scrollToTop}
           className="btn btn-primary position-fixed bottom-0 end-0 m-3"
           style={{ borderRadius: "50%", width: "50px", height: "50px" }}
         >
-          <FaArrowUp />
+          <ArrowIcon />
         </button>
       )}
-    </div>
+    </>
   );
 };
 

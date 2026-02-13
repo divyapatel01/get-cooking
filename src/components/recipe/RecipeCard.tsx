@@ -7,6 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Recipe } from "../../types";
 
+const BsClockIcon = BsClock as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const RiThumbUpLineIcon = RiThumbUpLine as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const AiOutlineThunderboltIcon = AiOutlineThunderbolt as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 interface Props {
   recipe: Recipe;
   type?: "default" | "list" | "carousel" | "featured";
@@ -31,13 +35,13 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
                 <div className="d-flex flex-wrap" style={{ fontSize: 12 }}>
                   {recipe.total_time_minutes ? (
                     <div className="d-flex align-items-center mb-1 me-3">
-                      <BsClock />
+                      <BsClockIcon />
                       <span className="ms-2">{recipe.total_time_minutes} mins</span>
                     </div>
                   ) : null}
                   {recipe.show ? (
                     <div className="d-flex align-items-center mb-1">
-                      <RiThumbUpLine />
+                      <RiThumbUpLineIcon />
                       <span className="ms-2">{recipe.show.name}</span>
                     </div>
                   ) : null}
@@ -61,13 +65,13 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
             <div className="d-flex flex-wrap" style={{ fontSize: 12 }}>
               {recipe.total_time_minutes ? (
                 <div className="d-flex align-items-center mb-1 me-3">
-                  <BsClock />
+                  <BsClockIcon />
                   <span className="ms-2">{recipe.total_time_minutes} mins</span>
                 </div>
               ) : null}
               {recipe.show ? (
                 <div className="d-flex align-items-center mb-1">
-                  <RiThumbUpLine />
+                  <RiThumbUpLineIcon />
                   <span className="ms-2">{recipe.show.name}</span>
                 </div>
               ) : null}
@@ -77,7 +81,7 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
           </div>
           <div className="recipe-card-meta">
             <div className="badge bg-primary">
-              <AiOutlineThunderbolt style={{ fontSize: 16 }} />
+              <AiOutlineThunderboltIcon style={{ fontSize: 16 }} />
               <span className="ms-2">{tag}</span>
             </div>
           </div>
@@ -93,13 +97,13 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
             <div className="d-flex flex-wrap mt-3" style={{ fontSize: 12 }}>
               {recipe.total_time_minutes ? (
                 <div className="d-flex align-items-center mb-1 me-3">
-                  <BsClock />
+                  <BsClockIcon />
                   <span className="ms-2">{recipe.total_time_minutes} mins</span>
                 </div>
               ) : null}
               {recipe.show ? (
                 <div className="d-flex align-items-center mb-1">
-                  <RiThumbUpLine />
+                  <RiThumbUpLineIcon />
                   <span className="ms-2">{recipe.show.name}</span>
                 </div>
               ) : null}
@@ -136,13 +140,13 @@ const RecipeCard = ({ recipe, type = "default", tag }: Props) => {
             <div className="d-flex flex-wrap mt-3" style={{ fontSize: 12 }}>
               {recipe.total_time_minutes ? (
                 <div className="d-flex align-items-center mb-1 me-3">
-                  <BsClock />
+                  <BsClockIcon />
                   <span className="ms-2">{recipe.total_time_minutes} mins</span>
                 </div>
               ) : null}
               {recipe.show ? (
                 <div className="d-flex align-items-center mb-1">
-                  <RiThumbUpLine />
+                  <RiThumbUpLineIcon />
                   <span className="ms-2">{recipe.show.name}</span>
                 </div>
               ) : null}

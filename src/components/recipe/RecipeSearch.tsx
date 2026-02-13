@@ -4,6 +4,8 @@ import { CgSearch } from "react-icons/cg";
 
 // import useDebounce from "../../hooks/useDebounce";
 
+const CgSearchIcon = CgSearch as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 // type SearchDetail = {
 //   display: string;
 //   search_value: string;
@@ -49,7 +51,7 @@ const RecipeSearch = () => {
           // value={searchTerm}
         />
         <span className="input-group-text bg-primary" id="basic-addon2">
-          <CgSearch />
+          <CgSearchIcon />
         </span>
       </div>
       {/* <datalist id="list-reciepes" >
